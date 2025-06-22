@@ -1,0 +1,41 @@
+# Pintos Docker 설정 무시 파일들
+.dockerignore
+
+# Docker 관련 임시 파일들
+docker-compose.override.yml
+
+# 빌드 디렉토리 (Docker에서 다시 빌드됨)
+threads/build/
+userprog/build/
+vm/build/
+filesys/build/
+
+# 임시 파일들
+*.tmp
+*.swp
+*.swo
+*~
+
+# 로그 파일들
+*.log
+
+# 백업 파일들
+*.bak
+*.backup
+
+# 압축 파일들
+*.tar.gz
+*.zip
+
+# Git 관련
+.git/
+.gitignore
+
+# IDE 관련
+.vscode/
+.idea/
+*.iml
+
+# OS 관련
+.DS_Store
+Thumbs.db
