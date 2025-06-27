@@ -9,7 +9,11 @@
 
 /* Include lib/user/stdio.h or lib/kernel/stdio.h, as
  * appropriate. */
-#include_next <stdio.h>
+#ifdef USERPROG
+#include "lib/user/stdio.h"
+#else
+#include "lib/kernel/stdio.h"
+#endif
 
 /* Predefined file handles. */
 #define STDIN_FILENO 0
