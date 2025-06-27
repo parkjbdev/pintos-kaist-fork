@@ -162,7 +162,7 @@ __vprintf (const char *format, va_list args,
 		}
 
 		/* Parse conversion specifiers. */
-		format = parse_conversion (format, &c, &args);
+		format = parse_conversion (format, &c, (va_list *)&args);
 
 		/* Do conversion. */
 		switch (*format) {
