@@ -6,6 +6,7 @@
 #include "filesys/free-map.h"
 #include "filesys/inode.h"
 #include "filesys/directory.h"
+#include "filesys/fat.h"
 #include "devices/disk.h"
 
 /* The disk that contains the file system. */
