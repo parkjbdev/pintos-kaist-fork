@@ -7,8 +7,22 @@ all::
 
 CLEAN_SUBDIRS = $(BUILD_SUBDIRS)
 
+threads::
+	$(MAKE) -C threads
+
+userprog::
+	$(MAKE) -C userprog
+
+vm::
+	$(MAKE) -C vm
+
+filesys::
+	$(MAKE) -C filesys
+
 clean::
 	for d in $(CLEAN_SUBDIRS); do $(MAKE) -C $$d $@; done
+	rm -f cscope.*
+	rm -f compile_commands.json
 	rm -f TAGS tags
 	rm -f *.tar.gz
 
@@ -38,3 +52,5 @@ else
 		mv /tmp/${TAR_PATH} . && \
 		echo "Successfully archived. Submit '${TAR_PATH}'."
 endif
+
+.PHONY: clean test archive all
